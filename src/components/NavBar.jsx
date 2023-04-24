@@ -7,7 +7,7 @@ const NavBar = () =>{
     return (
         <section className='navBar'>
             <div className='navLeft'>
-                <Link to="/Pokedex-Pokemon-API"><div className='navLogo'><MdOutlineCatchingPokemon/><SiPokemon/></div></Link>
+                <Link to="/Pokedex-Pokemon-API"><div className='navLogo'><MdOutlineCatchingPokemon/>HOME</div></Link>
             </div>
             <div className='navRight'>
                  <Link to="/pokemons"><div className='navLinks'>POKEDEX</div></Link>

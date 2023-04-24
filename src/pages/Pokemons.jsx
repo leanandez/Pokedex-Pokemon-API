@@ -14,9 +14,10 @@ function Pokemons() {
 
   const [pokeData, setPokeData] = useState([])
   const [loading, setLoading] = useState(true)
-  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/?limit=10")
+  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10")
   const [nextUrl, setNextUrl] = useState()
   const [prevUrl, setPrevUrl] = useState()
+  const [error, setError] = useState(false)
 
   //Los siguientes dos estados son para que las CARDS me muestren de a 10 cuando los pokemones son buscados por TYPE
   const [initialTypes, setInitialTypes] = useState(0)
@@ -96,6 +97,7 @@ function Pokemons() {
   const handleIncrementTypes = () => {
     setInitialTypes(initialTypes + 10)
     setFinalTypes(finalTypes + 10)
+    
   }
   const handleDecrementTypes = () => {
     setInitialTypes(initialTypes - 10)
@@ -107,6 +109,7 @@ function Pokemons() {
   useEffect(() => {
     pokemonFunction(pokeType)
     //console.log(pokeData)
+   console.log(url)   
 
   }, [url, pokeType, initialTypes, finalTypes])
 
@@ -138,7 +141,7 @@ function Pokemons() {
       <div className="pokemonsCards">
         <Cards pokemon={pokeData} color={colorData} loading={loading} min={initialTypes} max={finalTypes} />
         <div className="pokemonsCardsBtn">
-          <button onClick={() => {pokeType? handleDecrementTypes():setPokeData([]); setColorData([]); setUrl(prevUrl);  }} disabled={initialTypes === 0}><div className="prevBtn"></div></button>
+          <button onClick={() => {pokeType? handleDecrementTypes():setPokeData([]); setColorData([]); setUrl(prevUrl);  }} disabled={(initialTypes === 0 && pokeType !== undefined)||(url === "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=10")}><div className="prevBtn"></div></button>
           <button onClick={() => {pokeType?handleIncrementTypes(): setPokeData([]); setColorData([]); setUrl(nextUrl);  }} disabled={finalTypes > pokeData.length}><div className="nextBtn"></div></button>
         </div>
       </div>

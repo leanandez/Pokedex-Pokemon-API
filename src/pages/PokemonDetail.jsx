@@ -80,9 +80,11 @@ const PokemonDetail = () => {
                                     </div>
 
                                     <div className="detailTitle">
-                                        <div className="detailTitleTop" style={{ backgroundImage: `url(/types/${pokemonType}.png)`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}>
-                                            <div className="detailType"></div>
-                                            <div>
+                                        <div className="detailTitleTop" >
+                                            <div className="detailType" style={{backgroundImage: `url(${process.env.PUBLIC_URL + `/types/${pokemonType}.png`})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
+                                                
+                                            </div>
+                                            <div className="detailName">
                                                 <h3>{pokemon.types[0].type.name}</h3>
                                                 <h1>{pokemon.name}</h1>
                                             </div>
@@ -97,7 +99,7 @@ const PokemonDetail = () => {
                                             <div className="detailSubtitlesRight">
                                                 <p>{pokemon.height}M</p>
                                                 <p>{pokemon.weight}KG</p>
-                                                <p>{(pokemon.abilities = ![]) ? (pokemon.abilities[0].ability.name) : "None"}</p>
+                                                <p>{(pokemon.abilities != []) ? (pokemon.abilities[0].ability.name) : "None"}</p>
                                             </div>
                                         </div>
                                     </div>

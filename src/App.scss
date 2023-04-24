@@ -19,7 +19,8 @@
     justify-content: space-evenly;
     background-color: #1a2456;
     color: #f0efed;
-    font-family:  'Dosis', sans-serif;;
+    font-family: 'Dosis', sans-serif;
+    ;
 
     a:hover {
         color: #ff501c;
@@ -27,10 +28,12 @@
 
     .navLeft {
         width: 40%;
-        
+        align-self: center;
+        justify-self: center;
+
         .navLogo {
-           float: right;
-            font-size: 45px;
+            float: right;
+            font-weight: bolder;
         }
     }
 
@@ -48,7 +51,7 @@
     width: 100%;
 }
 
-.introModal{
+.introModal {
     background-color: black;
     height: 90%;
     width: 90%;
@@ -59,15 +62,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .modalVideo{
+
+    .modalVideo {
         width: 90%;
         height: 90%;
-       button{
+
+        button {
             float: right;
             font-weight: bolder;
             height: 2rem;
             width: 2rem;
- 
+
         }
     }
 }
@@ -791,6 +796,10 @@
 
 
 
+
+// POKEDEX--------------------------------------------------------------------------------------------------------------
+
+
 .pokemonsContainer {
     height: 130vh;
     width: 100%;
@@ -954,12 +963,10 @@
                     .detailType {
                         height: 100%;
                         width: 20%;
-
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: right;
-
                     }
+                }
+                .detailName{
+                    width: 80%;
                 }
 
                 .detailSubtitle {
@@ -1145,6 +1152,349 @@
 }
 
 
+
+
+//Media queryes
+
+@media only screen and (max-width: 426px) {
+
+//HOME
+
+.indexHeader {
+    height: auto;
+    width: 100%;
+
+    .dios {
+        height: 400vh;
+        width: 100%;
+
+        .semidios {
+            position: sticky;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(../src/img/pokemon1.jpg);
+            background-size: contain;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .popup {
+            position: absolute;
+            top: 0;
+            height: 400vh;
+            width: 50%;
+
+
+            .popupTitle {
+                position: sticky;
+                top: 15rem;
+                font-family: 'Dosis', sans-serif;
+
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    line-height: 4rem;
+                    color: #080b1b;
+
+                    .pokeTitle {
+                        font-size: 4rem;
+                    }
+
+                    .pokeSubtitle {
+                        font-size: 5rem;
+                    }
+
+                    .pokeSubInfo {
+                        font-size: 2rem;
+                    }
+
+                    .popupBtn {
+                        display: flex;
+
+
+                        button {
+                            color: #f0efed;
+                            background-color: #080b1b;
+                            border-radius: 20%;
+                            height: 3rem;
+                            width: 12rem;
+                            margin: 0 2rem;
+                            font-family: 'Dosis', sans-serif;
+                            font-size: 1rem;
+
+                            transition: opacity 2s;
+                            opacity: 1;
+
+
+                            &:hover {
+                                background-color: #ff8b68;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.pokeballFather2 {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    height: 50vh;
+    width: 50%;
+    
+    .pokeballCompleteFragments {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    .pokeballComplete {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .pokeballCenter {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+
+
+
+
+    .navBar {
+        height: 1rem;
+    }
+
+//POKEDEX
+
+    .pokemonsContainer {
+        height: 100vh;
+        background-image: url(../src/img/PokedexBackgroundMobile.png);
+
+        .pokemonsCards {
+            margin-bottom: 11rem;
+            height: 50vh;
+            width: 80%;
+        }
+        .cards {
+            height: 80vh;
+            width: 90%;
+            margin-left: 5%;
+            h1{
+                font-size: 3rem;
+            }
+            .card {
+                height: 5rem;
+                width: 5rem;
+
+                h2 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .pokemonsCardsBtn {
+            height: 5vh;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: -50px;
+            
+            button {
+                height: 2rem;
+                width: 12rem;
+            }
+        }
+    }
+
+    .pokemonsSearch {
+        position: absolute;
+        top: 8%;
+        left: 15%;
+        height: 3rem;
+        width: 70%;
+
+        .searchPokemon {
+            height: 100%;
+            width: 40%;
+
+            input {
+                height: 2rem;
+                width: 100%;
+                font-size: 0.6rem;
+            }
+
+            button {
+                font-weight: bold;
+                font-family: 'Inconsolata', monospace;
+                font-size: 0.6rem;
+                width: 80%;
+                height: 50%;
+                border-radius: 1rem;
+            }
+        }
+
+        .searchType {
+            height: 100%;
+            width: 40%;
+
+            select {
+                height: 1.5rem;
+                width: 100%;
+                font-size: 0.6rem;
+
+                option {
+                    height: 0.5rem;
+                }
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    
+
+    .pokemonDetailContainer {
+        background-image: url(../src/img/PokedexBackgroundMobile.png);
+        .pokemonDetail {
+            height: 20vh;
+            width: 70%;
+            margin-top: 2rem;
+            margin-left: 1rem;
+           
+            .pokemonDetailTop {
+                height: 90%;
+                width: 100%;
+
+                .detailPicture {
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                        height: 100%;
+                        position: relative;
+                    }
+                }
+    
+                .detailTitle {
+                    width: 80%;
+    
+                    .detailTitleTop {
+                        
+                        font-size: 1rem;
+    
+                        h3 {
+                            font-size: 1rem;
+                            
+                        }
+    
+                        .detailType {
+                            height: 100%;
+                            width: 30%;
+                        }
+                    }
+    
+                    .detailSubtitle {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+    
+            .pokemonDetailBottom {
+                height: 20vh;
+                width: 100%;
+
+                .detailStats {
+                    height: 100%;
+                    width: 100%;
+        
+                    .stats {
+                        margin-top: 2rem;
+                        width: 100%;
+                        height: 100%;
+
+    
+                        div {
+                            font-size: 0.7rem;
+                            height: 80%;
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: 40% 40% 10%;
+                            grid-gap: 1rem;
+    
+                        }
+                    }
+                }
+            }
+    
+            .pokemonDetailBtn {
+                padding-top: 3rem;
+                padding-right: 1rem;
+                height: 10vh;
+                width: 100%;
+    
+                button {
+                    height: 2rem;
+                    width: 15rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .pokemonsContainer {
+        height: 100vh;
+
+        .pokemonsCards {
+            margin-bottom: 15rem;
+            height: 50vh;
+            width: 80%;
+        }
+        .cards {
+            height: 80vh;
+            width: 90%;
+            margin-left: 5%;
+            h1{
+                font-size: 3rem;
+            }
+            .card {
+                height: 4rem;
+                width: 4rem;
+
+                h2 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .pokemonsCardsBtn {
+            height: 5vh;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: -80px;
+            
+            button {
+                height: 2rem;
+                width: 12rem;
+            }
+        }
+    }
+
+}
 
 
 

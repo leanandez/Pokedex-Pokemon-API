@@ -17,7 +17,7 @@ function Cards({ pokemon, color, loading, min, max }) {
 
     return (
         <div className="cards" style={{}}>
-            {loading ? <h1>Loading...</h1> :
+            {loading ? <h1>LOADING...</h1> :
                 pokemon.slice(min, max).map((item) => {
                     return (
                         <div className="card" key={item.id} onClick={()=> navigate(`/pokemon/${item.id}`)} style={{background: `linear-gradient(${cardColor(item.name)}, black 99%)`}}>
