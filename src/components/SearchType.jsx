@@ -11,61 +11,61 @@ function SearchType() {
         setTypeValue(e.target.value)
         switch (e.target.value) {
             case "grass":
-                navigate(`../pokemons/grass`)
+                navigate(`../Pokedex-Pokemon-API/grass`)
                 break;
             case "normal":
-                navigate("../pokemons/normal")
+                navigate("../Pokedex-Pokemon-API/normal")
                 break;
             case "fire":
-                navigate("../pokemons/fire")
+                navigate("../Pokedex-Pokemon-API/fire")
                 break;
             case "water":
-                navigate("../pokemons/water")
+                navigate("../Pokedex-Pokemon-API/water")
                 break;
             case "flying":
-                navigate("../pokemons/flying")
+                navigate("../Pokedex-Pokemon-API/flying")
                 break;
             case "fighting":
-                navigate("../pokemons/fighting")
+                navigate("../Pokedex-Pokemon-API/fighting")
                 break;
             case "poison":
-                navigate("../pokemons/poison")
+                navigate("../Pokedex-Pokemon-API/poison")
                 break;
             case "electric":
-                navigate("../pokemons/electric")
+                navigate("../Pokedex-Pokemon-API/electric")
                 break;
             case "ground":
-                navigate("../pokemons/ground")
+                navigate("../Pokedex-Pokemon-API/ground")
                 break;
             case "rock":
-                navigate("../pokemons/rock")
+                navigate("../Pokedex-Pokemon-API/rock")
                 break;
             case "psychic":
-                navigate("../pokemons/psychic")
+                navigate("../Pokedex-Pokemon-API/psychic")
                 break;
             case "ice":
-                navigate("../pokemons/ice")
+                navigate("../Pokedex-Pokemon-API/ice")
                 break;
             case "grass":
-                navigate("../pokemons/grass")
+                navigate("../Pokedex-Pokemon-API/grass")
                 break;
             case "bug":
-                navigate("../pokemons/bug")
+                navigate("../Pokedex-Pokemon-API/bug")
                 break;
             case "ghost":
-                navigate("../pokemons/ghost")
+                navigate("../Pokedex-Pokemon-API/ghost")
                 break;
             case "steel":
-                navigate("../pokemons/steel")
+                navigate("../Pokedex-Pokemon-API/steel")
                 break;
             case "dragon":
-                navigate("../pokemons/dragon")
+                navigate("../Pokedex-Pokemon-API/dragon")
                 break;
             case "dark":
-                navigate("../pokemons/dark")
+                navigate("../Pokedex-Pokemon-API/dark")
                 break;
             case "fairy":
-                navigate("../pokemons/fairy")
+                navigate("../Pokedex-Pokemon-API/fairy")
                 break;
             default:
 
