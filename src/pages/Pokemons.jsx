@@ -133,7 +133,7 @@ function Pokemons() {
       <div className="pokemonsSearch">
         <div className="searchPokemon">
           <input type="text" value={input} placeholder="NAME OR ID" onChange={handleChange}></input>
-          <button type="submit" onClick={() => { navigate(`/pokemon/${input}`) }}>SEARCH POKEMON</button>
+          <button type="submit" onClick={() => { navigate(`/Pokedex-Pokemon-API/${input}`) }}>SEARCH POKEMON</button>
         </div>
         <SearchType />
       </div>
